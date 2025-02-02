@@ -26,7 +26,7 @@ func (r rect) perim() int {
 func methods_main() {
 	r := rect{width: 10, height: 5}
 
-	// Go automatically handles conversion between values <-> pointers receivers for method calls
+	// Go automatically handles conversion between values <-> pointers receivers for method calls (and struct fields)
 
 	// Equivalent to (&r).area(), which passes a pointer to the method
 	fmt.Println("area: ", r.area())

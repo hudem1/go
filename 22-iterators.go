@@ -50,7 +50,7 @@ func genFib() iter.Seq[int] {
 	}
 }
 
-func main() {
+func iterators_main() {
 	// Iterator usage outside of `range` loop with explicit `yield` fct
 	fib := genFib()
 	// Call the iterator function with a custom `yield` fct
