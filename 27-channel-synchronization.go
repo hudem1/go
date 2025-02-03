@@ -9,7 +9,7 @@ import (
 )
 
 // Note how to pass the channel as function param `chan chan-type`
-func worker(done chan bool) {
+func workerCh27(done chan bool) {
 	fmt.Print("working...")
 	time.Sleep(time.Second)
 	fmt.Println("done")
@@ -20,7 +20,7 @@ func worker(done chan bool) {
 
 func channel_synchronization_main() {
 	done := make(chan bool, 1)
-	go worker(done)
+	go workerCh27(done)
 
 	// Block until we receive a sending op (end-of-exec notification)
 	<-done

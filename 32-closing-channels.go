@@ -14,6 +14,7 @@ func closing_channels_main() {
 		for {
 			// This special 2-value form of receive (2nd param has just always been optional) means:
 			// - j: contains the next value in the channel, otherwise the zero-value if channel is closed & empty
+			// 		|--> the zero-value is not sent in the channel, but rather it is the zero-value of the type!
 			// - more: is false if channel has been closed & all values in channel have been received/consumed, otherwise true
 			j, more := <-jobs
 			if more {
